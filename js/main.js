@@ -2,7 +2,7 @@ let containerElement = document.getElementById("container");
 let sliderElement = document.getElementById("slider");
 let slideElement = document.getElementsByClassName("slide");
 const next = document.getElementById('Avanti');
-const back = document.getElementById('indietro');
+const back = document.getElementById('Indietro');
 let currentSlide = 0;
 let ultimaSlideconNext = 5;
 
@@ -51,4 +51,23 @@ next.addEventListener("click", function(){
     }
 });
 
-back.addEventListener()
+back.addEventListener("click", function(){
+    console.log("Current Slide: ", currentSlide);
+
+    if(currentSlide > 0){
+        for (let i = 0; i < slideElement.length; i++) {
+            const slide = slideElement[i];
+
+            if (i == currentSlide - 1) {
+                slide.classList.remove("hidden");
+                console.log("Slide corrente: " + i + " -> Va visualizzata");
+            } else {
+                slide.classList.add("hidden");
+                console.log("Slide corrente: " + i + " -> Va nascosta");
+            }
+        }
+        currentSlide--;
+    }else{
+        console.log("non c'è una slide precedente");
+    }
+});
