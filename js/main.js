@@ -17,12 +17,12 @@ for (let i = 0; i < images.length; i++) {
 
     if(i == 0){
         let Image = document.createElement("img");
-        Image.src = `./img/${image}`;
+        Image.src = `${image}`;
         Image.className = "slide";
         sliderElement.append(Image)
     } else {
         let Image = document.createElement("img");
-        Image.src = `./img/${image}`;
+        Image.src = `${image}`;
         Image.className = "slide hidden";
         slider.append(Image);
     }
@@ -30,23 +30,25 @@ for (let i = 0; i < images.length; i++) {
 }
 
 //buttoni
-//next.addEventListener("click", function(){
-//    console.log("Current Slide: ", currentSlide);
-//
-//    if(currentSlide < ultimaSlideconNext) {
-//        for (let i = 0; i < slideElement.length; i++) {
-//            const slide = slideElement[i];
-//            
-//            if (i == currentSlide + 1) {
-//                slide.classList.remove("hidden");
-//                console.log("slide corrente : " + i + "--> Va visualizzata");
-//            } else {
-//                slide.classList.add("hidden");
-//                console.log("Slide corrente: " + i + " -> Va nascosta")
-//            }
-//        }
-//        currentSlide++;
-//    }else{
-//        console.log("Non c'e una slide successiva")
-//    }
-//});
+next.addEventListener("click", function(){
+    console.log("Current Slide: ", currentSlide);
+
+    if(currentSlide < ultimaSlideconNext) {
+        for (let i = 0; i < slideElement.length; i++) {
+            const slide = slideElement[i];
+            
+            if (i == currentSlide + 1) {
+                slide.classList.remove("hidden");
+                console.log("slide corrente : " + i + "--> Va visualizzata");
+            } else {
+                slide.classList.add("hidden");
+                console.log("Slide corrente: " + i + " -> Va nascosta")
+            }
+        }
+        currentSlide++;
+    }else{
+        console.log("Non c'e una slide successiva")
+    }
+});
+
+back.addEventListener()
