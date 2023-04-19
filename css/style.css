@@ -8,6 +8,7 @@
 #container {
     height: 100vh;
     position: relative;
+    background-color: #222;
 }
 
 #slider {
@@ -17,6 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 2px solid white;
 }
 
 .slide{
@@ -34,13 +36,13 @@
 #Indietro{
     position: absolute;
     top: 50%;
-    left: 27%;
+    left: 24%;
 }
 
 #Avanti{
     position: absolute;
     top: 50%;
-    right: 27%;
+    right: 24%;
 }
 
 .btn{ 
