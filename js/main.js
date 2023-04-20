@@ -6,6 +6,8 @@ const back = document.getElementById('Indietro');
 let currentSlide = 0;
 let ultimaSlideconNext = 5;
 
+let thumbms = document.getElementById("carouselThumbs")
+
 
 
 const images = ["./img/01.webp","./img/02.webp","./img/03.webp","./img/04.webp","./img/05.webp" ];
@@ -32,6 +34,8 @@ for (let i = 0; i < images.length; i++) {
 //buttoni
 next.addEventListener("click", function(){
     console.log("Current Slide: ", currentSlide);
+
+    slideElement[currentSlide].classList.remove("hidden");
 
     if(currentSlide < ultimaSlideconNext) {
         for (let i = 0; i < slideElement.length; i++) {
@@ -66,14 +70,15 @@ back.addEventListener("click", function(){
 
             if (i == currentSlide - 1) {
                 slide.classList.remove("hidden");
-                console.log("Slide corrente: " + i + " -> Va visualizzata");
             } else {
                 slide.classList.add("hidden");
-                console.log("Slide corrente: " + i + " -> Va nascosta");
             }
         }
         currentSlide--;
-    }else{
-        console.log("non c'è una slide precedente");
     }
+    if(currentSlide < 0){
+        currentSlide = slideElement.length - 1; 
+        
+    }
+    slideElement[currentSlide].classList.remove("hidden")
 });

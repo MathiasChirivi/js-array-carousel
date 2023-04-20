@@ -36,13 +36,13 @@
 #Indietro{
     position: absolute;
     top: 50%;
-    left: 24%;
+    left: 0;
 }
 
 #Avanti{
     position: absolute;
     top: 50%;
-    right: 24%;
+    right: 0;
 }
 
 .btn{ 
