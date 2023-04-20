@@ -49,6 +49,12 @@ next.addEventListener("click", function(){
     }else{
         console.log("Non c'e una slide successiva")
     }
+
+    if(currentSlide == slideElement.length){
+        currentSlide = 0; 
+    }
+
+    slideElement[currentSlide].classList.remove("hidden")
 });
 
 back.addEventListener("click", function(){
