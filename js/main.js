@@ -76,9 +76,9 @@ back.addEventListener("click", function(){
         }
         currentSlide--;
     }
-    if(currentSlide < 0){
+    else{
+        slideElement[currentSlide].classList.add("hidden")
         currentSlide = slideElement.length - 1; 
-        
+        slideElement[currentSlide].classList.remove("hidden")
     }
-    slideElement[currentSlide].classList.remove("hidden")
 });
